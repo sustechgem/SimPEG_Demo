@@ -58,14 +58,16 @@ Insert：
 ```
 4. **CentOS opens the xxxx port**
 	
-	4.1. **Personal remote server**
+* **Personal remote server**
 ```bash
 	sudo firewall-cmd --zone=public --list-all # view open ports
 	sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
 	sudo systemctl restart firewalld
 ```
-	4.2.**Aliyun (阿里云) remote server(commercial)**
+ 
+* **Aliyun (阿里云) remote server(commercial)**
 
+	
 Open security group configuration
 
 ![Image text](https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/安全组.png)
