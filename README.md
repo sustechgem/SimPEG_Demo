@@ -1,9 +1,10 @@
 # SimPEG_Demo
 Two examples of running SimPEG  from a remote server.
-learn more about SimPEG from [here](https://pypi.org/project/SimPEG/).
+
+Learn more about SimPEG from [here](https://pypi.org/project/SimPEG/).
 - SimPEG:0.14.2
 ## Notice 
-replace the `path` by your actual path in `3D_TEM_FWD_Test.ipynb`:
+Replace the `path` by your actual path in `3D_TEM_FWD_Test.ipynb`:
 ```=python
 # load FDTD solutions (Sun et al., 2018)
 data1 = pd.read_table('/home/wangke/3D_TEM_FWD_Test/data/50.dat', header=None)
@@ -24,7 +25,7 @@ Creat  `SimPEG`  conda environment by  `environment.yml`
 ```bash
 	conda env create -f environment.yml
 ```
- activate the environment
+ Activate the environment
 ```bash
 	conda activate SimPEG
 ```
@@ -37,10 +38,10 @@ Creat  `SimPEG`  conda environment by  `environment.yml`
 ```
 2. **Generate hashed password**
 ```bash
-    jupyter notebook password
-    Enter password:
-    Verify password:
-    [NotebookPasswordApp] Wrote hashed password to /.../.jupyter/jupyter_notebook_config.json
+	jupyter notebook password
+	Enter password:
+	Verify password:
+	[NotebookPasswordApp] Wrote hashed password to /.../.jupyter/jupyter_notebook_config.json
 ```    
 Hashed password location：/.../.jupyter/jupyter_notebook_config.json
 
@@ -48,22 +49,34 @@ Hashed password location：/.../.jupyter/jupyter_notebook_config.json
 ```bash
 	vim /.../.jupyter/jupyter_notebook_config.py
 ```
-insert：
+Insert：
 ```python
-    c.NotebookApp.ip='*'
-    c.NotebookApp.password='hashed password'
-    c.NotebookApp.open_browser=False
-    c.NotebookApp.port=xxxx
+	c.NotebookApp.ip='*'
+	c.NotebookApp.password='hashed password'
+	c.NotebookApp.open_browser=False
+	c.NotebookApp.port=xxxx
 ```
 4.  **CentOS opens the xxxx port**
+4.1.  Personal remote server
 ```bash
 	sudo firewall-cmd --zone=public --list-all # view open ports
-    sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
-    sudo systemctl restart firewalld
+	sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
+	sudo systemctl restart firewalld
 ```
+4.2 Aliyun (阿里云) remote server(commercial)
+
+Open security group configuration
+
+.. image:: /https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/安全组.png
+
+Add Port
+
+.. image:: /https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/添加端口.png
+
 5.  **Start notebook**
-Open jupyter notebook on the server\
-Then access http: / / remote IP:XXX  (e.g. 10.20.59.251:8888)\
+
+Open jupyter notebook on the server
+Then access http://remote IP:xxxx  (e.g. 10.20.59.251:8888)
 Input password
 
 
