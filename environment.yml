@@ -1,0 +1,12 @@
+name: SimPEG
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python>=3.6
+  - matplotlib
+  - jupyter
+  - Matplotlib=3.2.2
+  - SimPEG=0.14.2
