@@ -45,7 +45,7 @@ Creat  `SimPEG`  conda environment by  `environment.yml`
 ```    
 Hashed password location：/.../.jupyter/jupyter_notebook_config.json
 
-**3. Modify configuration file**
+3. **Modify configuration file**
 ```bash
 	vim /.../.jupyter/jupyter_notebook_config.py
 ```
@@ -58,14 +58,13 @@ Insert：
 ```
 4. **CentOS opens the xxxx port**
 	
- 4.1. **Personal remote server**
+	4.1. **Personal remote server**
 ```bash
 	sudo firewall-cmd --zone=public --list-all # view open ports
 	sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
 	sudo systemctl restart firewalld
 ```
-
-4.2 **Aliyun (阿里云) remote server(commercial)**
+	4.2.**Aliyun (阿里云) remote server(commercial)**
 
 Open security group configuration
 
