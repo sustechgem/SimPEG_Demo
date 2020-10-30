@@ -1,5 +1,5 @@
 # SimPEG_Demo
-Two examples of running SimPEG  from a remote server.
+An examples of running SimPEG  from a remote server.
 
 Learn more about SimPEG from [here](https://pypi.org/project/SimPEG/).
 - SimPEG:0.14.2
@@ -16,75 +16,3 @@ data3 = np.array(data3)
 data4 = pd.read_table('/...3D_TEM_FWD_Test/data/1050.dat', header=None)
 data4 = np.array(data4)
 ```
-
-## Configure environment variables
-1. Have python installed, preferably through [anaconda](https://www.anaconda.com/download/).
-2. Create the SimPEG conda environment
-
-Creat  `SimPEG`  conda environment by  `environment.yml`
-```bash
-	$ conda env create -f environment.yml
-```
- Activate the environment
-```bash
-	$ conda activate SimPEG
-```
-
-## How to run a Jupyter notebook from a remote server
-1. **Generate the configuration file**
-```bash
-	$ jupyter notebook --generate-config #non-root user
-	$ jupyter notebook --generate-config --allow-config #root user
-```
-2. **Generate hashed password**
-```bash
-	$ jupyter notebook password
-	Enter password:
-	Verify password:
-	[NotebookPasswordApp] Wrote hashed password to /.../.jupyter/jupyter_notebook_config.json
-```    
-Hashed password location：/.../.jupyter/jupyter_notebook_config.json
-
-3. **Modify configuration file**
-```bash
-	$ vim /.../.jupyter/jupyter_notebook_config.py
-```
-Insert：
-```python
-	c.NotebookApp.ip='*'
-	c.NotebookApp.password='hashed password'
-	c.NotebookApp.open_browser=False
-	c.NotebookApp.port=xxxx
-```
-4. **CentOS opens the xxxx port**
-	
-* **Personal remote server**
-```bash
-	$ sudo firewall-cmd --zone=public --list-all # view open ports
-	$ sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
-	$ sudo systemctl restart firewalld
-```
- 
-* **Aliyun (阿里云) remote server(commercial)**
-
-	
-Open security group configuration
-
-![Image text](https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/安全组.png)
-
-Add Port
-
-![Image text](https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/添加端口.png)
-
-5.  **Start notebook**
-
-Open jupyter notebook on the server
-
-Then access http://remote IP:xxxx  (e.g. 10.20.59.251:8888)
-
-Input password
-
-
-
-
-
