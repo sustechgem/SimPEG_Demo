@@ -7,13 +7,13 @@ Learn more about SimPEG from [here](https://pypi.org/project/SimPEG/).
 Replace the `path` by your actual path in `3D_TEM_FWD_Test.ipynb`:
 ```=python
 # load FDTD solutions (Sun et al., 2018)
-data1 = pd.read_table('/home/wangke/3D_TEM_FWD_Test/data/50.dat', header=None)
+data1 = pd.read_table('/.../3D_TEM_FWD_Test/data/50.dat', header=None)
 data1 = np.array(data1)
-data2 = pd.read_table('/home/wangke/3D_TEM_FWD_Test/data/150.dat', header=None)
+data2 = pd.read_table('/.../3D_TEM_FWD_Test/data/150.dat', header=None)
 data2 = np.array(data2)
-data3 = pd.read_table('/home/wangke/3D_TEM_FWD_Test/data/450.dat', header=None)
+data3 = pd.read_table('/.../3D_TEM_FWD_Test/data/450.dat', header=None)
 data3 = np.array(data3)
-data4 = pd.read_table('/home/wangke/3D_TEM_FWD_Test/data/1050.dat', header=None)
+data4 = pd.read_table('/...3D_TEM_FWD_Test/data/1050.dat', header=None)
 data4 = np.array(data4)
 ```
 
@@ -45,7 +45,7 @@ Creat  `SimPEG`  conda environment by  `environment.yml`
 ```    
 Hashed password location：/.../.jupyter/jupyter_notebook_config.json
 
-3. **Modify configuration file**
+**3. Modify configuration file**
 ```bash
 	vim /.../.jupyter/jupyter_notebook_config.py
 ```
@@ -56,22 +56,24 @@ Insert：
 	c.NotebookApp.open_browser=False
 	c.NotebookApp.port=xxxx
 ```
-4.  **CentOS opens the xxxx port**
-4.1.  Personal remote server
+4. **CentOS opens the xxxx port**
+	
+ 4.1. **Personal remote server**
 ```bash
 	sudo firewall-cmd --zone=public --list-all # view open ports
 	sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
 	sudo systemctl restart firewalld
 ```
-4.2 Aliyun (阿里云) remote server(commercial)
+
+4.2 **Aliyun (阿里云) remote server(commercial)**
 
 Open security group configuration
 
-.. image:: /https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/安全组.png
+![Image text](https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/安全组.png)
 
 Add Port
 
-.. image:: /https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/添加端口.png
+![Image text](https://github.com/sustechgem/SimPEG_Demo/blob/main/3D_TEM_FWD_Test/images/添加端口.png)
 
 5.  **Start notebook**
 
