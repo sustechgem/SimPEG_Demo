@@ -16,3 +16,15 @@ data3 = np.array(data3)
 data4 = pd.read_table('/...3D_TEM_FWD_Test/data/1050.dat', header=None)
 data4 = np.array(data4)
 ```
+## Configure environment variables
+1. Have python installed, preferably through [anaconda](https://www.anaconda.com/download/).
+2. Create the SimPEG conda environment
+
+Creat  `SimPEG`  conda environment by  `environment.yml`
+```bash
+	$ conda env create -f environment.yml
+```
+ Activate the environment
+```bash
+	$ conda activate SimPEG
+```
