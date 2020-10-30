@@ -23,22 +23,22 @@ data4 = np.array(data4)
 
 Creat  `SimPEG`  conda environment by  `environment.yml`
 ```bash
-	conda env create -f environment.yml
+	$ conda env create -f environment.yml
 ```
  Activate the environment
 ```bash
-	conda activate SimPEG
+	$ conda activate SimPEG
 ```
 
 ## How to run a Jupyter notebook from a remote server
 1. **Generate the configuration file**
 ```bash
-	jupyter notebook --generate-config #non-root user
-	jupyter notebook --generate-config --allow-config #root user
+	$ jupyter notebook --generate-config #non-root user
+	$ jupyter notebook --generate-config --allow-config #root user
 ```
 2. **Generate hashed password**
 ```bash
-	jupyter notebook password
+	$ jupyter notebook password
 	Enter password:
 	Verify password:
 	[NotebookPasswordApp] Wrote hashed password to /.../.jupyter/jupyter_notebook_config.json
@@ -47,7 +47,7 @@ Hashed password location：/.../.jupyter/jupyter_notebook_config.json
 
 3. **Modify configuration file**
 ```bash
-	vim /.../.jupyter/jupyter_notebook_config.py
+	$ vim /.../.jupyter/jupyter_notebook_config.py
 ```
 Insert：
 ```python
@@ -60,9 +60,9 @@ Insert：
 	
 * **Personal remote server**
 ```bash
-	sudo firewall-cmd --zone=public --list-all # view open ports
-	sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
-	sudo systemctl restart firewalld
+	$ sudo firewall-cmd --zone=public --list-all # view open ports
+	$ sudo firewall-cmd --zone=public --add-port=xxxx/tcp --permanent # open xxxx port
+	$ sudo systemctl restart firewalld
 ```
  
 * **Aliyun (阿里云) remote server(commercial)**
@@ -79,7 +79,9 @@ Add Port
 5.  **Start notebook**
 
 Open jupyter notebook on the server
+
 Then access http://remote IP:xxxx  (e.g. 10.20.59.251:8888)
+
 Input password
 
 
