@@ -17,3 +17,8 @@ Create  `SimPEG`  conda environment by  `environment.yml`
 ```
 ## Run jupyter notebook from remote server
 See the steps in the docs folder
+
+## Contributors
+Ke Wang: Documentation and testing
+Bo Ouyang: Programming
+Dikun Yang: Leader
