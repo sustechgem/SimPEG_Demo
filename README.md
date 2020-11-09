@@ -20,5 +20,7 @@ See the steps in the docs folder
 
 ## Contributors
 Ke Wang: Documentation and testing
+
 Bo Ouyang: Programming
+
 Dikun Yang: Leader
