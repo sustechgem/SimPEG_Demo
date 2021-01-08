@@ -8,5 +8,6 @@ dependencies:
   - python>=3.6
   - matplotlib
   - jupyter
+  - discretize=0.5.1
   - Matplotlib=3.2.2
   - SimPEG=0.14.2
